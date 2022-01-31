@@ -1,10 +1,10 @@
-function photographerFactory(data) {
-    const { id, name, portrait, country, city, tagline, price } = data;
+function photographerFactory (data) {
+  const { id, name, portrait, country, city, tagline, price } = data;
 
-    const picture = `assets/photographers/${portrait}`;
+  const picture = `assets/photographers/${portrait}`;
 
-    function getUserCardDOM() {
-      const cardTemplate = 
+  function getUserCardDOM () {
+    const cardTemplate =
       `
       <article>
         <a href="photographer.html?&id=${id}">
@@ -15,8 +15,8 @@ function photographerFactory(data) {
         <p>${tagline}</p>
         <p>${price}€/jour</p>
       </article>
-      ` 
-      return (cardTemplate);
-    }
-    return { name, picture, getUserCardDOM }
+      `;
+    return (cardTemplate);
+  }
+  return { name, picture, getUserCardDOM };
 }

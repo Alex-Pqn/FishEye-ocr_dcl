@@ -1,11 +1,11 @@
-function photographerMediaFactory(data) {
+function photographerMediaFactory (data) {
   const { id, title, video, image, likes, photographerId } = data;
 
   const mediaUrl = `assets/photographers/${photographerId}/${image || video}`;
-  const mediaType = (image) ? 'image' : 'video'
-  
-  function getPhotographerMediaCardDOM() {
-      const cardTemplate =
+  const mediaType = (image) ? 'image' : 'video';
+
+  function getPhotographerMediaCardDOM () {
+    const cardTemplate =
       `
       <article class="photograph-media-item" data-id="${id}">
         <div onclick="displayMediaModal(); setMediaModal(${id}, '${mediaType}', '${mediaUrl}', '${title}')" class="photograph-media-item_top">
@@ -25,8 +25,8 @@ function photographerMediaFactory(data) {
           </div>
         </div>
       </article>
-      `
-      return (cardTemplate);
-    }
-  return { title, getPhotographerMediaCardDOM }
+      `;
+    return (cardTemplate);
+  }
+  return { title, getPhotographerMediaCardDOM };
 }
