@@ -9,28 +9,106 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="/">
+        <img src="assets/images/logo.png" alt="Fisheye Home page" class="logo" />
+      </a>
     </header>
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      </div>
+      <!-- photograph-header -->
+      <header class="photograph-header">
+        <!-- left -->
+        <div class="photograph-header_left">
+          <h1 id="photograph-name"></h1>
+          <p id="photograph-city"></p>
+          <p id="photograph-tagline"></p>
+        </div>
+        <!-- middle -->
+        <div class="photograph-header_middle">
+          <button title="Contact me" class="contact_button" onclick="displayContactModal()">Contactez-moi</button>
+        </div>
+        <!-- right -->
+        <div class="photograph-header_right">
+          <img id="photograph-img" src="" alt="">
+        </div>
+      </header>
+      <!-- photograph-infos -->
+      <aside class="photograph-infos">
+        <!-- likes -->
+        <div class="photograph-infos_likes">
+          <p id="photograph-infos-likes"></p>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+        </div>
+        <!-- price -->
+        <div class="photograph-infos_price">
+          <p>
+            <span id="photograph-infos-price"></span>€ / jour
+          </p>
+        </div>
+      </aside>
+      <!-- photograph-medias-filters -->
+      <section class="photograph-medias-filters">
+        Trier par
+        <select onchange="filterChange(this.value)" title="Order by" name="order" id="order-filter">
+          <option value="popularity">Popularité</option>
+          <option value="date">Date</option>
+          <option value="title">Titre</option>
+        </select>
+      </section>
+      <!-- photograph-medias -->
+      <section class="photograph-medias_section"></section>
     </main>
+    <!-- media modal -->
+    <div id="media_modal" class="modal">
+      <div class="modal-header">
+        <span title="Close dialog" onclick="closeMediaModal()">&times;</span>
+      </div>
+      <!-- content -->
+      <div class="modal-content">
+        <div class="modal-media-img">
+          <img src="" alt="">
+          <video controls muted src=""></video>
+        </div>
+        <div class="modal-media-title">
+          <p></p>
+        </div>
+      </div>
+      <!-- next/prev -->
+      <a class="prev" title="Previous image" onclick="mediaModalSlide(-1)">&#10094;</a>
+      <a class="next" title="Next image" onclick="mediaModalSlide(1)">&#10095;</a>
+    </div>
+    <!-- contact modal -->
     <div id="contact_modal">
 			<div class="modal">
+        <!-- header -->
 				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <h1>Contactez <span></span></h1>
+          <img title="Close Contact form" src="assets/icons/close.svg" onclick="closeContactModal()" />
         </header>
+        <!-- form -->
 				<form>
 					<div>
 						<label>Prénom</label>
-						<input />
+						<input type="text" min="1" max="100" title="First name" />
 					</div>
-          <button class="contact_button">Envoyer</button>
+					<div>
+						<label>Nom</label>
+						<input type="text" min="1" max="100" title="Last name" />
+					</div>
+					<div>
+						<label>Email</label>
+						<input type="email" min="1" max="100" title="Email" />
+					</div>
+					<div>
+						<label>Votre message</label>
+            <textarea min="1" title="Your message"></textarea>
+					</div>
+          <button title="Send" class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
+    <script src="scripts/factories/photographerMedia.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/pages/photographerModal.js"></script>
   </body>
 </html>
