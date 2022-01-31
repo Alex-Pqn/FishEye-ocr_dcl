@@ -1,0 +1,99 @@
+.modal {
+  position: fixed;
+  top: 10%;
+  right: 25%;
+  border-radius: 5px;
+  background-color: #DB8876;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin: auto;
+}
+
+#media_modal {
+background-color: rgb(243, 243, 243);
+}
+#media_modal .modal-header, #media_modal .modal-content {
+width: 100%;
+}
+#media_modal .modal-header {
+display: flex;
+justify-content: flex-end;
+}
+#media_modal span {
+font-size: 2.5em;
+color: #901C1C;
+}
+#media_modal img, #media_modal video {
+width: 100%;
+max-height: 675px;
+object-fit: contain;
+}
+#media_modal .prev, #media_modal .next {
+position: absolute;
+color: #901C1C;
+font-size: 2em;
+margin: 5px;
+top: 50%;
+}
+#media_modal .prev {
+left: 0;
+}
+#media_modal .next {
+right: 0;
+}
+
+.modal header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal header img {
+  cursor: pointer;
+}
+
+.modal header h1 {
+  font-size: 50px;
+  font-weight: normal;
+  text-align: center;
+  color: black;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  color: #312E2E;
+  font-size: 36px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+}
+
+form textarea {
+width: 100%;
+height: 75px;
+font-size: 1.4em;
+padding: 10px;
+}
+
+form input {
+padding-left: 10px;
+font-size: 1.4em;
+width: 100%;
+height: 45px;
+border: none;
+border-radius: 5px;
+}
