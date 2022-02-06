@@ -1,22 +1,19 @@
-function photographerFactory (data) {
-  const { id, name, portrait, country, city, tagline, price } = data;
-
-  const picture = `assets/photographers/${portrait}`;
-
-  function getUserCardDOM () {
-    const cardTemplate =
-      `
-      <article>
-        <a href="photographer.html?&id=${id}">
-          <img src="${picture}" title="${name}" alt="">
-          <h2>${name}</h2>
-        </a>
-        <p>${city}, ${country}</p>
-        <p>${tagline}</p>
-        <p>${price}€/jour</p>
-      </article>
-      `;
-    return (cardTemplate);
+class Photographer {
+  constructor(id, name, portrait, country, city, tagline, price) {
+    this._id = id
+    this._name = name
+    this._portrait = portrait
+    this._country = country
+    this._city = city
+    this._tagline = tagline
+    this._price = price
   }
-  return { name, picture, getUserCardDOM };
+
+  get location() {
+    return `${this._city}, ${this._country}`
+  }
+  
+  get pictureUrl () {
+    return `assets/photographers/${this._portrait}`;
+  }
 }
