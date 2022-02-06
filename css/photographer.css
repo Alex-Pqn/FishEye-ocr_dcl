@@ -1,7 +1,3 @@
-#contact_modal, #media_modal {
-    display: none;
-}
-
 .photograph-header {
   display: flex;
   justify-content: space-around;
@@ -43,7 +39,7 @@ section {
 .photograph-medias_section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 50px;
 }
 .photograph-medias-filters {
