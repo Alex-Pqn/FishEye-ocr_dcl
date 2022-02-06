@@ -58,30 +58,32 @@
       <section class="photograph-medias_section"></section>
     </main>
     <!-- media modal -->
-    <div id="media_modal" class="modal">
-      <div class="modal-header">
-        <span title="Close dialog" onclick="closeMediaModal()">&times;</span>
-      </div>
-      <!-- content -->
-      <div class="modal-content">
-        <div class="modal-media-img">
-          <img src="" alt="">
-          <video controls muted src=""></video>
+    <div class="modal-container" id="media_modal">
+      <div class="modal" aria-label="image closeup view">
+        <div class="modal-header">
+          <span title="Close dialog" onclick="closeMediaModal()">&times;</span>
         </div>
-        <div class="modal-media-title">
-          <p></p>
+        <!-- content -->
+        <div class="modal-content">
+          <div class="modal-media-img">
+            <img src="" alt="">
+            <video controls muted src=""></video>
+          </div>
+          <div class="modal-media-title">
+            <p></p>
+          </div>
         </div>
+        <!-- next/prev -->
+        <a class="prev" title="Previous image" onclick="mediaModalSlide(-1)">&#10094;</a>
+        <a class="next" title="Next image" onclick="mediaModalSlide(1)">&#10095;</a>
       </div>
-      <!-- next/prev -->
-      <a class="prev" title="Previous image" onclick="mediaModalSlide(-1)">&#10094;</a>
-      <a class="next" title="Next image" onclick="mediaModalSlide(1)">&#10095;</a>
     </div>
     <!-- contact modal -->
-    <div id="contact_modal">
+    <div class="modal-container" id="contact_modal">
 			<div class="modal">
         <!-- header -->
 				<header>
-          <h1>Contactez <span></span></h1>
+          <h1>Contactez-moi <span></span></h1>
           <img title="Close Contact form" src="assets/icons/close.svg" onclick="closeContactModal()" />
         </header>
         <!-- form -->
@@ -106,9 +108,11 @@
 				</form>
 			</div>
 		</div>
+    <script src="scripts/pages/index.js"></script>
+    <script src="scripts/pages/photographerMedia.js"></script>
     <script src="scripts/factories/photographerMedia.js"></script>
-    <script src="/scripts/utils/contactForm.js"></script>
-    <script src="scripts/pages/photographer.js"></script>
-    <script src="scripts/pages/photographerModal.js"></script>
+    <script src="scripts/templates/photographerMedia.js"></script>
+    <script src="/scripts/utils/modal.js"></script>
+    <script src="scripts/modals/photographerMedia.js"></script>
   </body>
 </html>
