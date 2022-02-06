@@ -8,7 +8,7 @@ function mediaModalReset () {
   modalImgElement.setAttribute('src', '');
   modalImgElement.setAttribute('alt', '');
   modalImgElement.style.display = 'none';
-  
+
   modalVideoElement.setAttribute('src', '');
   modalVideoElement.setAttribute('alt', '');
   modalVideoElement.style.display = 'none';
@@ -17,10 +17,10 @@ function mediaModalReset () {
 // set media modal
 function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
   mediaModalReset();
-  
+
   const modalTitleElement = document.querySelector('.modal-media-title p');
   modalTitleElement.textContent = mediaTitle;
-  
+
   switch (mediaType) {
     case 'image':
       modalImgElement.setAttribute('src', mediaUrl);
@@ -32,8 +32,8 @@ function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
       modalVideoElement.setAttribute('alt', mediaTitle);
       modalVideoElement.style.display = 'flex';
       break;
-    default: 
-      throw 'Unknown media type format'
+    default:
+      throw 'Unknown media type format';
   }
 
   actualMediaId = mediaId;
@@ -42,7 +42,7 @@ function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
 // on media modal slide
 function mediaModalSlide (slideAction) {
   getNextAssetPath = (photographerId, media) => `assets/photographers/${photographerId}/${media}`;
-  
+
   // get the actual media index
   const actualMediaIndex = photographer.medias.findIndex(media => {
     if (media.id === actualMediaId) return true;
@@ -60,7 +60,7 @@ function mediaModalSlide (slideAction) {
 
     setMediaModal(nextMedia.id, nextMediaType, nextMediaUrl, nextMedia.title);
   }
-  
+
   // previous slide
   function prevSlide () {
     const prevMediaIndex = actualMediaIndex - 1;

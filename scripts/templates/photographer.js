@@ -21,6 +21,6 @@ function photographerTemplate (newPhotographer) {
     </p>
   </article>
   `;
-  
+
   return cardTemplate;
 }

@@ -4,18 +4,18 @@ const urlParams = new URLSearchParams(window.location.search);
 const userId = +urlParams.get('id');
 
 function photographerNotFound () {
-  const mainElement = document.getElementById('main')
+  const mainElement = document.getElementById('main');
   const mediasSectionElement = document.querySelector('.photograph-medias_section');
   const infosSectionElement = document.querySelector('.photograph-infos');
   const headerSectionElement = document.querySelector('.photograph-header');
   const filterSectionElement = document.querySelector('.photograph-medias-filters');
-  
-  mediasSectionElement.style.display = 'none'
-  infosSectionElement.style.display = 'none'
-  headerSectionElement.style.display = 'none'
-  filterSectionElement.style.display = 'none'
-  
-  mainElement.insertAdjacentHTML('beforeend', `<p>La page de ce photographe n'existe pas ou a été supprimée.</p>`)
+
+  mediasSectionElement.style.display = 'none';
+  infosSectionElement.style.display = 'none';
+  headerSectionElement.style.display = 'none';
+  filterSectionElement.style.display = 'none';
+
+  mainElement.insertAdjacentHTML('beforeend', '<p>La page de ce photographe n\'existe pas ou a été supprimée.</p>');
 }
 
 // display photographer details
@@ -48,21 +48,20 @@ function displayPhotographerInfos () {
 // display photographer medias
 function displayPhotographerMedias () {
   const photographerMediasSection = document.querySelector('.photograph-medias_section');
-  const isTherePhotographerMedias = () => photographer.medias.length >= 1
-  
+  const isTherePhotographerMedias = () => photographer.medias.length >= 1;
+
   // reset medias
   document.querySelectorAll('.photograph-media-item').forEach(media => media.remove());
-  
+
   // push medias
   if (isTherePhotographerMedias()) {
     photographer.medias.forEach(media => {
-      const newMedia = new Media(media.photographerId, media.id, media.title, media.video, media.image, media.likes)
-  
-      const photographerMediaCardDOM = photographerMediaTemplate(newMedia)
+      const newMedia = new Media(media.photographerId, media.id, media.title, media.video, media.image, media.likes);
+
+      const photographerMediaCardDOM = photographerMediaTemplate(newMedia);
       photographerMediasSection.insertAdjacentHTML('beforeend', photographerMediaCardDOM);
     });
-  }
-  else photographerMediasSection.insertAdjacentHTML('beforeend', `<p>${photographer.name} n'a publié aucun média.</p>`)
+  } else photographerMediasSection.insertAdjacentHTML('beforeend', `<p>${photographer.name} n'a publié aucun média.</p>`);
 }
 
 // increment media like
@@ -80,9 +79,9 @@ function incrementMediaLike (mediaLikedId) {
 
 async function init () {
   ({ photographers } = await getPhotographersData());
-  
+
   photographers.forEach(photographerItem => {
-    if (photographerItem.id === userId) photographer = photographerItem
+    if (photographerItem.id === userId) photographer = photographerItem;
   });
 
   if (!photographer) return photographerNotFound();
@@ -97,7 +96,7 @@ function filterChange (option) {
   titleFilter = () => photographer.medias.sort((media1, media2) => {
     if (media1.title < media2.title) return -1;
     if (media1.title > media2.title) return 1;
-    
+
     return 0;
   });
   dateFilter = () => photographer.medias.sort((media1, media2) => new Date(media1.date).getTime() - new Date(media2.date).getTime());

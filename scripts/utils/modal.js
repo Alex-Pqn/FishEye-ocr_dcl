@@ -18,7 +18,7 @@ function closeMediaModal () {
 document.addEventListener('keydown', event => {
   const isMediaModalActive = () => mediaModal.style.display !== 'none';
   const key = event.key;
-  
+
   if (isMediaModalActive) {
     switch (key) {
       case 'ArrowRight':
@@ -30,7 +30,7 @@ document.addEventListener('keydown', event => {
         mediaModalSlide(-1);
         break;
       case 'Escape':
-        closeMediaModal()
+        closeMediaModal();
         break;
       default:
     }

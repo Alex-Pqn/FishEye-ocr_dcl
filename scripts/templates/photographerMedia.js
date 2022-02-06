@@ -22,6 +22,6 @@ function photographerMediaTemplate (newMedia) {
     </div>
   </article>
   `;
-  
+
   return cardTemplate;
 }
