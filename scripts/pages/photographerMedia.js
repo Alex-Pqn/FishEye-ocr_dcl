@@ -55,11 +55,17 @@ function displayPhotographerMedias () {
 
   // push medias
   if (isTherePhotographerMedias()) {
-    photographer.medias.forEach(media => {
+    photographer.medias.forEach(async media => {
       const newMedia = new Media(media.photographerId, media.id, media.title, media.video, media.image, media.likes);
 
-      const photographerMediaCardDOM = photographerMediaTemplate(newMedia);
-      photographerMediasSection.insertAdjacentHTML('beforeend', photographerMediaCardDOM);
+      fetch(newMedia.mediaUrl)
+      .then(result => {
+        if (result.ok) {
+          const photographerMediaCardDOM = photographerMediaTemplate(newMedia);
+          photographerMediasSection.insertAdjacentHTML('beforeend', photographerMediaCardDOM); 
+        }
+      })
+      .catch(err => console.error(err))
     });
   } else photographerMediasSection.insertAdjacentHTML('beforeend', `<p>${photographer.name} n'a publié aucun média.</p>`);
 }
