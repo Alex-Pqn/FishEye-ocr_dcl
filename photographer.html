@@ -87,7 +87,7 @@
           <img title="Close Contact form" src="assets/icons/close.svg" onclick="closeContactModal()" />
         </header>
         <!-- form -->
-				<form>
+				<form onsubmit="return validateFormContact(this, event)">
 					<div>
 						<label for="firstname">Prénom</label>
 						<input id="firstname" type="text" min="1" max="100" title="First name" />
@@ -104,7 +104,7 @@
 						<label for="message">Votre message</label>
             <textarea id="message" min="1" title="Your message"></textarea>
 					</div>
-          <button title="Send" class="contact_button">Envoyer</button>
+          <button type="submit" title="Send" class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
@@ -113,6 +113,7 @@
     <script src="scripts/factories/photographerMedia.js"></script>
     <script src="scripts/templates/photographerMedia.js"></script>
     <script src="/scripts/utils/modal.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
     <script src="scripts/modals/photographerMedia.js"></script>
   </body>
 </html>
