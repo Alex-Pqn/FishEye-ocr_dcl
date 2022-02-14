@@ -1,3 +1,9 @@
+
+/**
+ * Get photographers data
+ * @param {Array} photographers
+ * @param {Array} photographersMedias
+ */
 async function getPhotographersData () {
   const response = await fetch('./data/photographers.json');
   const photographerData = await response.json();

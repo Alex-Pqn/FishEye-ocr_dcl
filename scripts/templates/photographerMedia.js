@@ -1,12 +1,23 @@
+
+/**
+ * Photographer media template
+ * @param {Object} newMedia
+ * @param {number} newMedia._id
+ * @param {string} newMedia._title
+ * @param {string} newMedia.mediaUrl
+ * @param {number} newMedia._totalLikes
+ * @param {string} newMedia.mediaType
+ * @param {string} newMedia.mediaCard
+ */
 function photographerMediaTemplate (newMedia) {
-  const { _id, _title, _totalLikes, mediaUrl, mediaType } = newMedia;
+  const { _id, _title, _totalLikes, mediaUrl, mediaType, mediaCard } = newMedia;
 
   const cardTemplate =
   `
   <article class="photograph-media-item" data-id="${_id}">
-    <div onclick="displayMediaModal(); setMediaModal(${_id}, '${mediaType}', '${mediaUrl}', '${_title}')" class="photograph-media-item_top">
-      ${mediaType === 'image' ? `<img src="${mediaUrl}" title="${_title}, closeup view" alt="${_title}">` : `<video muted> <source src="${mediaUrl}#t=0.1" type="video/mp4" title="${_title}, closeup view" alt="${_title}"> Your browser does not support the video tag. </video>`}
-    </div>
+    <a href="#" return="false;" onclick="displayMediaModal(); setMediaModal(${_id}, '${mediaType}', '${mediaUrl}', '${_title}')" class="photograph-media-item_top">
+      ${mediaCard}
+    </a>
     <div class="photograph-media-item_bottom">
       <p>
         ${_title}

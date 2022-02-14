@@ -3,7 +3,9 @@ const modalVideoElement = document.querySelector('.modal-media-img video');
 
 let actualMediaId;
 
-// reset media modal
+/**
+ * Reset media modal
+ */
 function mediaModalReset () {
   modalImgElement.setAttribute('src', '');
   modalImgElement.setAttribute('alt', '');
@@ -14,7 +16,13 @@ function mediaModalReset () {
   modalVideoElement.style.display = 'none';
 }
 
-// set media modal
+/**
+ * Set media modal
+ * @param {number} mediaId
+ * @param {string} mediaType
+ * @param {string} mediaUrl
+ * @param {string} mediaTitle
+ */
 function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
   mediaModalReset();
 
@@ -39,8 +47,16 @@ function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
   actualMediaId = mediaId;
 }
 
-// on media modal slide
+/**
+ * Media modal slide (event)
+ * @param {number} slideAction
+ */
 function mediaModalSlide (slideAction) {
+  /**
+   * Get the next asset path
+   * @param {number} photographerId
+   * @param {string} media
+   */
   getNextAssetPath = (photographerId, media) => `assets/photographers/${photographerId}/${media}`;
 
   // get the actual media index

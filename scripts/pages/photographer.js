@@ -1,9 +1,25 @@
 
+/**
+ * Display photographers
+ * @param {Array} photographers
+ */
 function displayPhotographers (photographers) {
   const photographersSection = document.querySelector('.photographer_section');
   const isTherePhotographers = () => photographers.length >= 1;
 
   if (isTherePhotographers()) {
+    /**
+     * Create a new photographer
+     * @param {Object} photographer
+     * @param {number} photographer.id
+     * @param {string} photographer.name
+     * @param {string} photographer.portrait
+     * @param {string} photographer.country
+     * @param {string} photographer.city
+     * @param {string} photographer.tagline
+     * @param {number} photographer.price
+     * @param {string} newPhotographer.pictureUrl
+     */
     photographers.forEach(async photographer => {
       const newPhotographer = new Photographer(photographer.id, photographer.name, photographer.portrait, photographer.country, photographer.city, photographer.tagline, photographer.price);
       

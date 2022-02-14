@@ -1,3 +1,9 @@
+
+/**
+ * Validate form contact
+ * @param {Object} form
+ * @param {Object} event
+ */
 function validateFormContact (form, event) {
   event.preventDefault();
   
