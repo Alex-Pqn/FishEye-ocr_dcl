@@ -1,4 +1,4 @@
-class MediaImage {
+class PhotographerMediaImage {
   /**
    * Photographer media image factory
    * @param {Object} media

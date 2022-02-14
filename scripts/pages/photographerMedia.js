@@ -83,7 +83,7 @@ function displayPhotographerMedias () {
      * @param {string} newMedia.mediaUrl
      */
     photographer.medias.forEach(async media => {
-      const newMedia = new MediaFactory(media);
+      const newMedia = new PhotographerMediaFactory(media);
 
       fetch(newMedia.mediaUrl)
       .then(result => {

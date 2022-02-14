@@ -1,4 +1,4 @@
-class MediaFactory {
+class PhotographerMediaFactory {
   /**
    * Photographer media factory
    * @param {Object} media
@@ -11,9 +11,9 @@ class MediaFactory {
     
     switch (this.mediaType) {
       case 'video':
-        return new MediaVideo(media);
+        return new PhotographerMediaVideo(media);
       case 'image':
-        return new MediaImage(media);
+        return new PhotographerMediaImage(media);
       default:
         throw 'Unknown media format';
     }

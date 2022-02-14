@@ -4,7 +4,7 @@
  * @param {Array} photographers
  */
 function displayPhotographers (photographers) {
-  const photographersSection = document.querySelector('.photographer_section');
+  const photographersSection = document.querySelector('.photographers_section');
   const isTherePhotographers = () => photographers.length >= 1;
 
   if (isTherePhotographers()) {

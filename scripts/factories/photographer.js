@@ -1,4 +1,14 @@
 class Photographer {
+  /**
+   * Photographer factory
+   * @param {number} id
+   * @param {string} name
+   * @param {string} portrait
+   * @param {string} country
+   * @param {string} city
+   * @param {string} tagline
+   * @param {number} price
+   */
   constructor (id, name, portrait, country, city, tagline, price) {
     this._id = id;
     this._name = name;

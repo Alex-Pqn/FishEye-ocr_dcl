@@ -1,4 +1,4 @@
-class MediaVideo {
+class PhotographerMediaVideo {
   /**
    * Photographer media video factory
    * @param {Object} media
