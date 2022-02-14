@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
@@ -84,7 +84,7 @@
         <!-- header -->
 				<header>
           <h1>Contactez-moi <span></span></h1>
-          <img title="Close Contact form" src="assets/icons/close.svg" onclick="closeContactModal()" />
+          <img title="Close Contact form" src="assets/icons/close.svg" alt="" onclick="closeContactModal()" />
         </header>
         <!-- form -->
 				<form onsubmit="return validateFormContact(this, event)">
@@ -110,7 +110,9 @@
 		</div>
     <script src="scripts/pages/index.js"></script>
     <script src="scripts/pages/photographerMedia.js"></script>
-    <script src="scripts/factories/photographerMedia.js"></script>
+    <script src="scripts/factories/photographerMediaFactory.js"></script>
+    <script src="scripts/factories/photographerMediaImage.js"></script>
+    <script src="scripts/factories/photographerMediaVideo.js"></script>
     <script src="scripts/templates/photographerMedia.js"></script>
     <script src="/scripts/utils/modal.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
