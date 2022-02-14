@@ -3,8 +3,8 @@ class PhotographerMediaImage {
    * Photographer media image factory
    * @param {Object} media
    * @param {number} media.photographerId
-   * @param {number} media.id 
-   * @param {string} media.title 
+   * @param {number} media.id
+   * @param {string} media.title
    * @param {string} media.image
    * @param {number} media.likes
    */
@@ -19,10 +19,12 @@ class PhotographerMediaImage {
   get mediaUrl () {
     return `assets/photographers/${this._photographerId}/${this._imageUrl}`;
   }
+
   get mediaType () {
-    return 'image'
+    return 'image';
   }
+
   get mediaCard () {
-    return `<img src="${this.mediaUrl}" title="${this._title}, closeup view" alt="${this._title}">`
+    return `<img src="${this.mediaUrl}" title="${this._title}, closeup view" alt="${this._title}">`;
   }
 }

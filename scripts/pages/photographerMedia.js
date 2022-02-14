@@ -86,13 +86,13 @@ function displayPhotographerMedias () {
       const newMedia = new PhotographerMediaFactory(media);
 
       fetch(newMedia.mediaUrl)
-      .then(result => {
-        if (result.ok) {
-          const photographerMediaCardDOM = photographerMediaTemplate(newMedia);
-          photographerMediasSection.insertAdjacentHTML('beforeend', photographerMediaCardDOM); 
-        }
-      })
-      .catch(err => console.error(err))
+        .then(result => {
+          if (result.ok) {
+            const photographerMediaCardDOM = photographerMediaTemplate(newMedia);
+            photographerMediasSection.insertAdjacentHTML('beforeend', photographerMediaCardDOM);
+          }
+        })
+        .catch(err => console.error(err));
     });
   } else photographerMediasSection.insertAdjacentHTML('beforeend', `<p>${photographer.name} n'a publié aucun média.</p>`);
 }
@@ -164,7 +164,7 @@ function filterChange (option) {
 
     return 0;
   });
-  
+
   /**
    * Date filter - sort medias by dates
    * @param {Array} photographer.medias
@@ -174,7 +174,7 @@ function filterChange (option) {
    * @param {string} media2.date
    */
   dateFilter = () => photographer.medias.sort((media1, media2) => new Date(media1.date).getTime() - new Date(media2.date).getTime());
-  
+
   /**
    * Popularity filter - sort medias by likes
    * @param {Array} photographer.medias

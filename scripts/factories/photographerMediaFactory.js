@@ -8,7 +8,7 @@ class PhotographerMediaFactory {
   constructor (media) {
     this._videoUrl = media.video;
     this._imageUrl = media.image;
-    
+
     switch (this.mediaType) {
       case 'video':
         return new PhotographerMediaVideo(media);
@@ -18,6 +18,7 @@ class PhotographerMediaFactory {
         throw 'Unknown media format';
     }
   }
+
   get mediaType () {
     if (this._imageUrl) return 'image';
     else if (this._videoUrl) return 'video';

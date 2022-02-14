@@ -3,8 +3,8 @@ class PhotographerMediaVideo {
    * Photographer media video factory
    * @param {Object} media
    * @param {number} media.photographerId
-   * @param {number} media.id 
-   * @param {string} media.title 
+   * @param {number} media.id
+   * @param {string} media.title
    * @param {string} media.video
    * @param {number} media.likes
    */
@@ -17,12 +17,14 @@ class PhotographerMediaVideo {
   }
 
   get mediaUrl () {
-    return `assets/photographers/${this._photographerId}/${this._videoUrl}`
+    return `assets/photographers/${this._photographerId}/${this._videoUrl}`;
   }
+
   get mediaType () {
-    return 'video'
+    return 'video';
   }
+
   get mediaCard () {
-    return `<video muted> <source src="${this.mediaUrl}#t=0.1" type="video/mp4" title="${this._title}, closeup view" alt="${this._title}"> Your browser does not support the video tag. </video>`
+    return `<video muted> <source src="${this.mediaUrl}#t=0.1" type="video/mp4" title="${this._title}, closeup view" alt="${this._title}"> Your browser does not support the video tag. </video>`;
   }
 }
