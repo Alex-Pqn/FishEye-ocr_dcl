@@ -1,6 +1,6 @@
 class Photographer {
   /**
-   * Photographer factory
+   * Photographer
    * @param {number} id
    * @param {string} name
    * @param {string} portrait
@@ -22,7 +22,6 @@ class Photographer {
   get location () {
     return `${this._city}, ${this._country}`;
   }
-
   get pictureUrl () {
     return `assets/photographers/${this._portrait}`;
   }

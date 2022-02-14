@@ -1,6 +1,6 @@
 class PhotographerMediaVideo {
   /**
-   * Photographer media video factory
+   * Photographer media video
    * @param {Object} media
    * @param {number} media.photographerId
    * @param {number} media.id
@@ -19,11 +19,9 @@ class PhotographerMediaVideo {
   get mediaUrl () {
     return `assets/photographers/${this._photographerId}/${this._videoUrl}`;
   }
-
   get mediaType () {
     return 'video';
   }
-
   get mediaCard () {
     return `<video muted> <source src="${this.mediaUrl}#t=0.1" type="video/mp4" title="${this._title}, closeup view" alt="${this._title}"> Your browser does not support the video tag. </video>`;
   }

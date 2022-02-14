@@ -1,6 +1,6 @@
 class PhotographerMediaImage {
   /**
-   * Photographer media image factory
+   * Photographer media image
    * @param {Object} media
    * @param {number} media.photographerId
    * @param {number} media.id
@@ -19,11 +19,9 @@ class PhotographerMediaImage {
   get mediaUrl () {
     return `assets/photographers/${this._photographerId}/${this._imageUrl}`;
   }
-
   get mediaType () {
     return 'image';
   }
-
   get mediaCard () {
     return `<img src="${this.mediaUrl}" title="${this._title}, closeup view" alt="${this._title}">`;
   }

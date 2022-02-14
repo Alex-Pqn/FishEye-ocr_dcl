@@ -4,7 +4,7 @@ const modalVideoElement = document.querySelector('.modal-media-img video');
 let actualMediaId;
 
 /**
- * Reset media modal
+ * Reset all the media modal attributs
  */
 function mediaModalReset () {
   modalImgElement.setAttribute('src', '');
@@ -17,7 +17,7 @@ function mediaModalReset () {
 }
 
 /**
- * Set media modal
+ * Set new media modal
  * @param {number} mediaId
  * @param {string} mediaType
  * @param {string} mediaUrl
@@ -64,7 +64,22 @@ function mediaModalSlide (slideAction) {
     if (media.id === actualMediaId) return true;
   });
 
-  // next slide
+  /**
+   * Next slide (event)
+   * @param {Array}  photographer.medias
+   * @param {number} nextMediaIndex
+   * @param {number} actualMediaIndex
+   * 
+   * @param {Object} nextMedia
+   * @param {number} nextMedia.id
+   * @param {string} nextMedia.image
+   * @param {string} nextMedia.title
+   * @param {string} nextMedia.video
+   * @param {number} nextMedia.photographerId
+   * 
+   * @param {string} nextMediaType
+   * @param {string} nextMediaUrl
+   */
   function nextSlide () {
     const nextMediaIndex = actualMediaIndex + 1;
 
@@ -77,7 +92,22 @@ function mediaModalSlide (slideAction) {
     setMediaModal(nextMedia.id, nextMediaType, nextMediaUrl, nextMedia.title);
   }
 
-  // previous slide
+  /**
+   * Previous slide (event)
+   * @param {Array}  photographer.medias
+   * @param {number} prevMediaIndex
+   * @param {number} actualMediaIndex
+   * 
+   * @param {Object} nextMedia
+   * @param {number} nextMedia.id
+   * @param {string} nextMedia.image
+   * @param {string} nextMedia.title
+   * @param {string} nextMedia.video
+   * @param {number} nextMedia.photographerId
+   * 
+   * @param {string} nextMediaType
+   * @param {string} nextMediaUrl
+   */
   function prevSlide () {
     const prevMediaIndex = actualMediaIndex - 1;
 
