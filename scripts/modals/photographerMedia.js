@@ -1,10 +1,11 @@
 const modalImgElement = document.querySelector('.modal-media-img img');
 const modalVideoElement = document.querySelector('.modal-media-img video');
 
+/** @type {number}  */
 let actualMediaId;
 
 /**
- * Reset all the media modal attributs
+ * Reset all media modal attributs
  */
 function mediaModalReset () {
   modalImgElement.setAttribute('src', '');
@@ -66,27 +67,20 @@ function mediaModalSlide (slideAction) {
 
   /**
    * Next slide (event)
-   * @param {Array}  photographer.medias
-   * @param {number} nextMediaIndex
-   * @param {number} actualMediaIndex
-   * 
-   * @param {Object} nextMedia
-   * @param {number} nextMedia.id
-   * @param {string} nextMedia.image
-   * @param {string} nextMedia.title
-   * @param {string} nextMedia.video
-   * @param {number} nextMedia.photographerId
-   * 
-   * @param {string} nextMediaType
-   * @param {string} nextMediaUrl
    */
   function nextSlide () {
+    /** @type {number}  */
     const nextMediaIndex = actualMediaIndex + 1;
 
+    /** @type {{id: number, photographerId: number, title: string, image: string, video: string}} */
     let nextMedia = photographer.medias[nextMediaIndex];
+    
     if (!nextMedia) nextMedia = photographer.medias[0];
 
+    /** @type {string}  */
     const nextMediaType = (nextMedia.image) ? 'image' : 'video';
+    
+    /** @type {string}  */
     const nextMediaUrl = getNextAssetPath(nextMedia.photographerId, nextMedia.image || nextMedia.video);
 
     setMediaModal(nextMedia.id, nextMediaType, nextMediaUrl, nextMedia.title);
@@ -94,27 +88,20 @@ function mediaModalSlide (slideAction) {
 
   /**
    * Previous slide (event)
-   * @param {Array}  photographer.medias
-   * @param {number} prevMediaIndex
-   * @param {number} actualMediaIndex
-   * 
-   * @param {Object} nextMedia
-   * @param {number} nextMedia.id
-   * @param {string} nextMedia.image
-   * @param {string} nextMedia.title
-   * @param {string} nextMedia.video
-   * @param {number} nextMedia.photographerId
-   * 
-   * @param {string} nextMediaType
-   * @param {string} nextMediaUrl
    */
   function prevSlide () {
+    /** @type {number}  */
     const prevMediaIndex = actualMediaIndex - 1;
 
+    /** @type {{id: number, photographerId: number, title: string, image: string, video: string}} */
     let nextMedia = photographer.medias[prevMediaIndex];
+    
     if (!nextMedia) nextMedia = photographer.medias[photographer.medias.length - 1];
 
+    /** @type {string}  */
     const nextMediaType = (nextMedia.image) ? 'image' : 'video';
+    
+    /** @type {string}  */
     const nextMediaUrl = getNextAssetPath(nextMedia.photographerId, nextMedia.image || nextMedia.video);
 
     setMediaModal(nextMedia.id, nextMediaType, nextMediaUrl, nextMedia.title);

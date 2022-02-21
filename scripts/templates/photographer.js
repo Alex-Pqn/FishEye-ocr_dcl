@@ -1,13 +1,7 @@
 
 /**
  * Photographer template
- * @param {Object} newPhotographer
- * @param {number} newPhotographer._id
- * @param {string} newPhotographer._name
- * @param {string} newPhotographer._tagline
- * @param {number} newPhotographer._price
- * @param {string} newPhotographer.location
- * @param {string} newPhotographer.pictureUrl
+ * @param {_id: number, _name: string, _tagline: string, _price: number, location: string, pictureUrl: string} newPhotographer
  */
 function photographerTemplate (newPhotographer) {
   const { _id, _name, _tagline, _price, location, pictureUrl } = newPhotographer;

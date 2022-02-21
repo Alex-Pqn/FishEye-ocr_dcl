@@ -1,9 +1,7 @@
 class PhotographerMediaFactory {
   /**
    * Photographer media factory
-   * @param {Object} media
-   * @param {string} media.video
-   * @param {string} media.image
+   * @param {video: string, image: string} media
    */
   constructor (media) {
     this._videoUrl = media.video;

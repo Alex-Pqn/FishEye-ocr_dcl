@@ -1,13 +1,7 @@
 
 /**
  * Photographer media template
- * @param {Object} newMedia
- * @param {number} newMedia._id
- * @param {string} newMedia._title
- * @param {string} newMedia.mediaUrl
- * @param {number} newMedia._totalLikes
- * @param {string} newMedia.mediaType
- * @param {string} newMedia.mediaCard
+  @param {_id: number, _title: string, mediaUrl: string, _totalLikes: number, mediaType: string, mediaCard: string} newMedia
  */
 function photographerMediaTemplate (newMedia) {
   const { _id, _title, _totalLikes, mediaUrl, mediaType, mediaCard } = newMedia;

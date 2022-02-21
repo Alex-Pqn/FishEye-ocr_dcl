@@ -3,6 +3,7 @@ const mediaModal = document.getElementById('media_modal');
 
 function displayContactModal () {
   contactModal.style.display = 'flex';
+  document.getElementById('firstname').focus()
 }
 function closeContactModal () {
   contactModal.style.display = 'none';

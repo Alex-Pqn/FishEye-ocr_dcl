@@ -24,12 +24,6 @@ function photographerNotFound () {
 
 /**
  * Display photographer details
- * @param {Object} photographer
- * @param {string} photographer.name
- * @param {string} photographer.portrait
- * @param {string} photographer.city
- * @param {string} photographer.country
- * @param {string} photographer.tagline
  */
 function displayPhotographerHeader () {
   const headerNameElement = document.querySelector('#photograph-name');
@@ -48,9 +42,6 @@ function displayPhotographerHeader () {
 
 /**
  * Display photographer infos
- * @param {Object} photographer
- * @param {number} photographer.price
- * @param {Array}  photographer.medias
  */
 function displayPhotographerInfos () {
   const totalMediasLikes = () => photographer.medias.reduce((acc, curr) => acc + curr.likes, 0);
@@ -64,9 +55,6 @@ function displayPhotographerInfos () {
 
 /**
  * Display photographer medias
- * @param {Object} photographer
- * @param {Array}  photographer.medias
- * @param {string} photographer.name
  */
 function displayPhotographerMedias () {
   const photographerMediasSection = document.querySelector('.photograph-medias_section');
@@ -105,9 +93,7 @@ function displayPhotographerMedias () {
 function incrementMediaLike (mediaLikedId) {
   /**
    * Increment media like
-   * @param {Object} media
-   * @param {number} media.id
-   * @param {number} media.likes
+   * @param {id: number, likes: number} media
    */
   photographer.medias.forEach(media => {
     if (media.id === mediaLikedId) {
@@ -129,10 +115,7 @@ async function init () {
 
   /**
    * Set photographer item
-   * @param {Object} photographer
-   * @param {Object} photographerItem
-   * @param {number} photographerItem.id
-   * @param {number} userId
+   * @param {id: number} photographerItem
    */
   photographers.forEach(photographerItem => {
     if (photographerItem.id === userId) photographer = photographerItem;
@@ -153,10 +136,8 @@ function filterChange (option) {
   /**
    * Title filter - sort medias by titles
    * @param {Array} photographer.medias
-   * @param {Object} media1
-   * @param {Object} media2
-   * @param {string} media1.title
-   * @param {string} media2.title
+   * @param {title: string} media1
+   * @param {title: string} media2
    */
   titleFilter = () => photographer.medias.sort((media1, media2) => {
     if (media1.title < media2.title) return -1;
@@ -168,20 +149,16 @@ function filterChange (option) {
   /**
    * Date filter - sort medias by dates
    * @param {Array} photographer.medias
-   * @param {Object} media1
-   * @param {Object} media2
-   * @param {string} media1.date
-   * @param {string} media2.date
+   * @param {date: string} media1
+   * @param {date: string} media2
    */
   dateFilter = () => photographer.medias.sort((media1, media2) => new Date(media1.date).getTime() - new Date(media2.date).getTime());
 
   /**
    * Popularity filter - sort medias by likes
    * @param {Array} photographer.medias
-   * @param {Object} media1
-   * @param {Object} media2
-   * @param {number} media1.likes
-   * @param {number} media2.likes
+   * @param {likes: number} media1
+   * @param {likes: number} media2
    */
   popularityFilter = () => photographer.medias.sort((media1, media2) => media2.likes - media1.likes);
 

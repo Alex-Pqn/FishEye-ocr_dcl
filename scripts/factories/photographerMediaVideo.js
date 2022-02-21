@@ -1,12 +1,7 @@
 class PhotographerMediaVideo {
   /**
    * Photographer media video
-   * @param {Object} media
-   * @param {number} media.photographerId
-   * @param {number} media.id
-   * @param {string} media.title
-   * @param {string} media.video
-   * @param {number} media.likes
+   * @param {photographerId: number, id: number, title: string, video: string, likes: number} media
    */
   constructor (media) {
     this._photographerId = media.photographerId;

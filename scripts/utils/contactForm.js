@@ -15,4 +15,5 @@ function validateFormContact (form, event) {
   };
 
   console.log(user);
+  closeContactModal()
 }
