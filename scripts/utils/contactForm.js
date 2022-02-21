@@ -4,6 +4,7 @@
  * @param {Object} form
  * @param {Object} event
  */
+// eslint-disable-next-line no-unused-vars
 function validateFormContact (form, event) {
   event.preventDefault();
 
@@ -15,5 +16,6 @@ function validateFormContact (form, event) {
   };
 
   console.log(user);
-  closeContactModal()
+  // eslint-disable-next-line no-undef
+  closeContactModal();
 }

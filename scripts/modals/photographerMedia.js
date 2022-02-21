@@ -34,15 +34,17 @@ function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
     case 'image':
       modalImgElement.setAttribute('src', mediaUrl);
       modalImgElement.setAttribute('alt', mediaTitle);
+
       modalImgElement.style.display = 'flex';
       break;
     case 'video':
       modalVideoElement.setAttribute('src', mediaUrl);
+
       modalVideoElement.setAttribute('alt', mediaTitle);
       modalVideoElement.style.display = 'flex';
       break;
     default:
-      throw 'Unknown media type format';
+      throw new Error('Unknown media type format');
   }
 
   actualMediaId = mediaId;
@@ -50,17 +52,25 @@ function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
 
 /**
  * Media modal slide (event)
+ *
  * @param {number} slideAction
  */
+// eslint-disable-next-line no-unused-vars
 function mediaModalSlide (slideAction) {
   /**
    * Get the next asset path
    * @param {number} photographerId
    * @param {string} media
    */
+  // eslint-disable-next-line no-undef
   getNextAssetPath = (photographerId, media) => `assets/photographers/${photographerId}/${media}`;
 
+  // set focus on media modal
+  // eslint-disable-next-line no-undef
+  setMediaModalFocus();
+
   // get the actual media index
+  // eslint-disable-next-line
   const actualMediaIndex = photographer.medias.findIndex(media => {
     if (media.id === actualMediaId) return true;
   });
@@ -73,14 +83,17 @@ function mediaModalSlide (slideAction) {
     const nextMediaIndex = actualMediaIndex + 1;
 
     /** @type {{id: number, photographerId: number, title: string, image: string, video: string}} */
+    // eslint-disable-next-line no-undef
     let nextMedia = photographer.medias[nextMediaIndex];
-    
+
+    // eslint-disable-next-line no-undef
     if (!nextMedia) nextMedia = photographer.medias[0];
 
     /** @type {string}  */
     const nextMediaType = (nextMedia.image) ? 'image' : 'video';
-    
+
     /** @type {string}  */
+    // eslint-disable-next-line no-undef
     const nextMediaUrl = getNextAssetPath(nextMedia.photographerId, nextMedia.image || nextMedia.video);
 
     setMediaModal(nextMedia.id, nextMediaType, nextMediaUrl, nextMedia.title);
@@ -94,14 +107,17 @@ function mediaModalSlide (slideAction) {
     const prevMediaIndex = actualMediaIndex - 1;
 
     /** @type {{id: number, photographerId: number, title: string, image: string, video: string}} */
+    // eslint-disable-next-line no-undef
     let nextMedia = photographer.medias[prevMediaIndex];
-    
+
+    // eslint-disable-next-line no-undef
     if (!nextMedia) nextMedia = photographer.medias[photographer.medias.length - 1];
 
     /** @type {string}  */
     const nextMediaType = (nextMedia.image) ? 'image' : 'video';
-    
+
     /** @type {string}  */
+    // eslint-disable-next-line no-undef
     const nextMediaUrl = getNextAssetPath(nextMedia.photographerId, nextMedia.image || nextMedia.video);
 
     setMediaModal(nextMedia.id, nextMediaType, nextMediaUrl, nextMedia.title);

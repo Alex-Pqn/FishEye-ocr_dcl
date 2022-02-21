@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 class PhotographerMediaVideo {
   /**
    * Photographer media video
@@ -14,9 +15,11 @@ class PhotographerMediaVideo {
   get mediaUrl () {
     return `assets/photographers/${this._photographerId}/${this._videoUrl}`;
   }
+
   get mediaType () {
     return 'video';
   }
+
   get mediaCard () {
     return `<video muted> <source src="${this.mediaUrl}#t=0.1" type="video/mp4" title="${this._title}, closeup view" alt="${this._title}"> Your browser does not support the video tag. </video>`;
   }

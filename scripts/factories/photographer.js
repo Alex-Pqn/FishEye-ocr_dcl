@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 class Photographer {
   /**
    * Photographer
@@ -22,6 +23,7 @@ class Photographer {
   get location () {
     return `${this._city}, ${this._country}`;
   }
+
   get pictureUrl () {
     return `assets/photographers/${this._portrait}`;
   }

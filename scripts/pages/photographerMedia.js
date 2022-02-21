@@ -71,11 +71,13 @@ function displayPhotographerMedias () {
      * @param {string} newMedia.mediaUrl
      */
     photographer.medias.forEach(async media => {
+      // eslint-disable-next-line no-undef
       const newMedia = new PhotographerMediaFactory(media);
 
       fetch(newMedia.mediaUrl)
         .then(result => {
           if (result.ok) {
+            // eslint-disable-next-line no-undef
             const photographerMediaCardDOM = photographerMediaTemplate(newMedia);
             photographerMediasSection.insertAdjacentHTML('beforeend', photographerMediaCardDOM);
           }
@@ -90,6 +92,7 @@ function displayPhotographerMedias () {
  * @param {Array}  photographer.medias
  * @param {number} mediaLikedId
  */
+// eslint-disable-next-line no-unused-vars
 function incrementMediaLike (mediaLikedId) {
   /**
    * Increment media like
@@ -111,12 +114,14 @@ function incrementMediaLike (mediaLikedId) {
  * @param {Object} photographer
  */
 async function init () {
+  // eslint-disable-next-line no-undef
   ({ photographers } = await getPhotographersData());
 
   /**
    * Set photographer item
    * @param {id: number} photographerItem
    */
+  // eslint-disable-next-line no-undef
   photographers.forEach(photographerItem => {
     if (photographerItem.id === userId) photographer = photographerItem;
   });
@@ -139,6 +144,7 @@ function filterChange (option) {
    * @param {title: string} media1
    * @param {title: string} media2
    */
+  // eslint-disable-next-line no-undef
   titleFilter = () => photographer.medias.sort((media1, media2) => {
     if (media1.title < media2.title) return -1;
     if (media1.title > media2.title) return 1;
@@ -152,6 +158,7 @@ function filterChange (option) {
    * @param {date: string} media1
    * @param {date: string} media2
    */
+  // eslint-disable-next-line no-undef
   dateFilter = () => photographer.medias.sort((media1, media2) => new Date(media1.date).getTime() - new Date(media2.date).getTime());
 
   /**
@@ -160,16 +167,20 @@ function filterChange (option) {
    * @param {likes: number} media1
    * @param {likes: number} media2
    */
+  // eslint-disable-next-line no-undef
   popularityFilter = () => photographer.medias.sort((media1, media2) => media2.likes - media1.likes);
 
   switch (option) {
     case 'date':
+      // eslint-disable-next-line no-undef
       dateFilter();
       break;
     case 'title':
+      // eslint-disable-next-line no-undef
       titleFilter();
       break;
     default:
+      // eslint-disable-next-line no-undef
       popularityFilter();
   }
 

@@ -3,6 +3,7 @@
  * Get photographers data
  * @return {Array.<{id: number, name: string, portrait: string, country: string, city: string, tagline: string, price: number, pictureUrl: string, medias: Array.<{id: number, photographerId: number, date: string, likes: number, price: number, title: string, video: string}>}>}
  */
+// eslint-disable-next-line no-unused-vars
 async function getPhotographersData () {
   const response = await fetch('./data/photographers.json');
   const photographerData = await response.json();
@@ -18,6 +19,6 @@ async function getPhotographersData () {
     const photographerMedias = photographersMedias.filter(photographerMedia => photographerMedia.photographerId === photographer.id);
     photographer.medias = [...photographerMedias];
   });
-  
+
   return { photographers };
 }

@@ -10,11 +10,13 @@ function displayPhotographers (photographers) {
   if (isTherePhotographers()) {
     // create a new photographer
     photographers.forEach(async photographer => {
+      // eslint-disable-next-line no-undef
       const newPhotographer = new Photographer(photographer.id, photographer.name, photographer.portrait, photographer.country, photographer.city, photographer.tagline, photographer.price);
 
       fetch(newPhotographer.pictureUrl)
         .then(result => {
           if (result.ok) {
+            // eslint-disable-next-line no-undef
             const photographerCardDOM = photographerTemplate(newPhotographer);
             photographersSection.insertAdjacentHTML('beforeend', photographerCardDOM);
           }
@@ -25,8 +27,10 @@ function displayPhotographers (photographers) {
 };
 
 async function init () {
+  // eslint-disable-next-line no-undef
   ({ photographers } = await getPhotographersData());
 
+  // eslint-disable-next-line no-undef
   displayPhotographers(photographers);
 };
 
