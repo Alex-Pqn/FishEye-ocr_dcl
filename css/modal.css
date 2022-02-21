@@ -32,6 +32,9 @@
 .modal-header, #media_modal .modal-content {
   width: 100%;
 }
+.modal-header span {
+  cursor: pointer;
+}
 #media_modal .modal-header {
   display: flex;
   justify-content: flex-end;
