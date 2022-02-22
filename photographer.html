@@ -61,21 +61,21 @@
     <div class="modal-container" id="media_modal">
       <div class="modal" aria-label="image closeup view">
         <div class="modal-header">
-          <span title="Close dialog" onclick="closeMediaModal()">&times;</span>
+          <span title="Close dialog" tabindex="3" onclick="closeMediaModal()">&times;</span>
         </div>
         <!-- content -->
         <div class="modal-content">
           <div class="modal-media-img">
-            <img src="" alt="">
-            <video controls muted src=""></video>
+            <img tabindex="-1" src="" alt="">
+            <video tabindex="-1" controls muted src=""></video>
           </div>
           <div class="modal-media-title">
             <p></p>
           </div>
         </div>
         <!-- next/prev -->
-        <a class="prev" title="Previous image" onclick="mediaModalSlide(-1)">&#10094;</a>
-        <a class="next" title="Next image" onclick="mediaModalSlide(1)">&#10095;</a>
+        <a class="prev" title="Previous image" tabindex="1" onclick="mediaModalSlide(-1)">&#10094;</a>
+        <a class="next" title="Next image" tabindex="2" onclick="mediaModalSlide(1)">&#10095;</a>
       </div>
     </div>
     <!-- contact modal -->

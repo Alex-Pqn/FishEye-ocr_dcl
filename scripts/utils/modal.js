@@ -14,16 +14,18 @@ function closeContactModal () {
 // eslint-disable-next-line no-unused-vars
 function displayMediaModal () {
   mediaModal.style.display = 'flex';
-  setMediaModalFocus();
 }
 function closeMediaModal () {
   mediaModal.style.display = 'none';
-  document.querySelector('.modal-media-img').removeAttribute('tabindex');
 }
 
 // eslint-disable-next-line no-unused-vars
 function setMediaModalFocus () {
-  document.querySelector('.modal-media-img').setAttribute('tabindex', '0');
+  const imgElement = document.querySelector('#media_modal .modal-media-img img');
+  const videoElement = document.querySelector('#media_modal .modal-media-img video');
+
+  if (imgElement.getAttribute('src')) imgElement.focus();
+  if (videoElement.getAttribute('src')) videoElement.focus();
 }
 
 document.addEventListener('keydown', event => {

@@ -36,12 +36,14 @@ function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
       modalImgElement.setAttribute('alt', mediaTitle);
 
       modalImgElement.style.display = 'flex';
+      modalImgElement.focus();
       break;
     case 'video':
       modalVideoElement.setAttribute('src', mediaUrl);
 
       modalVideoElement.setAttribute('alt', mediaTitle);
       modalVideoElement.style.display = 'flex';
+      modalVideoElement.focus();
       break;
     default:
       throw new Error('Unknown media type format');
@@ -64,10 +66,6 @@ function mediaModalSlide (slideAction) {
    */
   // eslint-disable-next-line no-undef
   getNextAssetPath = (photographerId, media) => `assets/photographers/${photographerId}/${media}`;
-
-  // set focus on media modal
-  // eslint-disable-next-line no-undef
-  setMediaModalFocus();
 
   // get the actual media index
   // eslint-disable-next-line
