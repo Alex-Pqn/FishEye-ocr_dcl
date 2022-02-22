@@ -21,7 +21,7 @@ function photographerTemplate (newPhotographer) {
     </a>
     <div tabindex="${tabindex + 1}">
       <p>
-        ${location}
+        <span> ${location} </span>
       </p>
       <p>
         ${_tagline}
