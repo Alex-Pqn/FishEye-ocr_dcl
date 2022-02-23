@@ -88,11 +88,16 @@ section {
 .photograph-infos {
   background-color: #e28888;
   font-size: 1.1em;
-  padding: 0 25px;
+  padding: 12px 25px;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
   display: flex;
   position: fixed;
   bottom: 0;
   right: 50px;
+}
+.photograph-infos p {
+  margin: 0;
 }
 .photograph-infos_likes {
   display: flex;
