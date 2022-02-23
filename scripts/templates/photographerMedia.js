@@ -8,7 +8,7 @@ let tabindex = 0;
 function photographerMediaTemplate (newMedia) {
   const { _id, _title, _totalLikes, mediaUrl, mediaType, mediaCard } = newMedia;
 
-  tabindex += 10;
+  tabindex += 30;
 
   const cardTemplate =
   `

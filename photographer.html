@@ -83,32 +83,32 @@
       </div>
     </div>
     <!-- contact modal -->
-    <div class="modal-container" id="contact_modal">
+    <div tabindex="1" class="modal-container" id="contact_modal">
 			<div class="modal">
         <!-- header -->
 				<header>
-          <h1>Contactez-moi <span></span></h1>
-          <img title="Close Contact form" src="assets/icons/close.svg" alt="" onclick="closeContactModal()" />
+          <h1 tabindex="2">Contactez-moi <span></span></h1>
+          <img tabindex="12" title="Close Contact form" src="assets/icons/close.svg" alt="" onclick="closeContactModal()" />
         </header>
         <!-- form -->
 				<form onsubmit="return validateFormContact(this, event)">
 					<div>
-						<label for="firstname">Prénom</label>
-						<input id="firstname" type="text" min="1" max="100" title="First name" />
+						<label tabindex="3" for="firstname">Prénom</label>
+						<input tabindex="4" id="firstname" type="text" min="1" max="100" title="First name" />
 					</div>
 					<div>
-						<label for="lastname">Nom</label>
-						<input id="lastname" type="text" min="1" max="100" title="Last name" />
+						<label tabindex="5" for="lastname">Nom</label>
+						<input tabindex="6" id="lastname" type="text" min="1" max="100" title="Last name" />
 					</div>
 					<div>
-						<label for="email">Email</label>
-						<input id="email" type="email" min="1" max="100" title="Email" />
+						<label tabindex="7" for="email">Email</label>
+						<input tabindex="8" id="email" type="email" min="1" max="100" title="Email" />
 					</div>
 					<div>
-						<label for="message">Votre message</label>
-            <textarea id="message" min="1" title="Your message"></textarea>
+						<label tabindex="9" for="message">Votre message</label>
+            <textarea tabindex="10" id="message" min="1" title="Your message"></textarea>
 					</div>
-          <button type="submit" title="Send" class="contact_button">Envoyer</button>
+          <button tabindex="11" type="submit" title="Send" class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
