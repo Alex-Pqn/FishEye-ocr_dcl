@@ -8,7 +8,7 @@ let tabindex = 0;
 function photographerTemplate (newPhotographer) {
   const { _id, _name, _tagline, _price, location, pictureUrl } = newPhotographer;
 
-  tabindex += 5;
+  tabindex += 10;
 
   const cardTemplate =
   `

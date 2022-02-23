@@ -46,6 +46,7 @@ document.addEventListener('keydown', event => {
         break;
       case 'Escape':
         closeMediaModal();
+        closeContactModal();
         break;
       default:
     }

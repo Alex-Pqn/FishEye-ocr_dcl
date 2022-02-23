@@ -1,5 +1,5 @@
-const modalImgElement = document.querySelector('.modal-media-img img');
-const modalVideoElement = document.querySelector('.modal-media-img video');
+const modalImgElement = document.querySelector('.media-modal-img img');
+const modalVideoElement = document.querySelector('.media-modal-img video');
 
 /** @type {number}  */
 let actualMediaId;
@@ -27,7 +27,7 @@ function mediaModalReset () {
 function setMediaModal (mediaId, mediaType, mediaUrl, mediaTitle) {
   mediaModalReset();
 
-  const modalTitleElement = document.querySelector('.modal-media-title p');
+  const modalTitleElement = document.querySelector('.media-modal-title p');
   modalTitleElement.textContent = mediaTitle;
 
   switch (mediaType) {

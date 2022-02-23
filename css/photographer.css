@@ -39,17 +39,20 @@ section {
 .photograph-medias_section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 50px;
 }
 .photograph-medias-filters {
-  padding-left: 30px;
+  display: flex;
+  align-items: center;
 }
 .photograph-medias-filters select {
   background-color: #901C1C;
   font-size: 1em;
+  margin-left: 10px;
   color: white;
   padding: 5px;
+  height: 38px;
   border-radius: .3em;
 }
 .photograph-medias-filters select option {
@@ -58,9 +61,6 @@ section {
   color: white;
 }
 
-.photograph-media-item {
-  margin: 15px;
-}
 .photograph-media-item_bottom {
   display: flex;
   justify-content: space-between;
@@ -73,7 +73,8 @@ section {
   fill: #901C1C;
 }
 .photograph-media-item {
-  margin: 15px;
+  margin: 35px;
+  margin-left: 0;
 }
 .photograph-media-item_top img, .photograph-media-item_top video {
   width: 400px;

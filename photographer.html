@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <a href="/">
+      <a tabindex="0" href="/">
         <img src="assets/images/logo.png" alt="Fisheye Home page" class="logo" />
       </a>
     </header>
@@ -18,21 +18,23 @@
       <header class="photograph-header">
         <!-- left -->
         <div class="photograph-header_left">
-          <h1 id="photograph-name"></h1>
-          <p id="photograph-city"></p>
-          <p id="photograph-tagline"></p>
+          <h1 tabindex="1" id="photograph-name"></h1>
+          <div tabindex="2">
+            <p id="photograph-city"></p>
+            <p id="photograph-tagline"></p>
+          </div>
         </div>
         <!-- middle -->
         <div class="photograph-header_middle">
-          <button title="Contact me" class="contact_button" onclick="displayContactModal()">Contactez-moi</button>
+          <button tabindex="3" title="Contact me" class="contact_button" onclick="displayContactModal()">Contactez-moi</button>
         </div>
         <!-- right -->
         <div class="photograph-header_right">
-          <img id="photograph-img" src="" alt="">
+          <img tabindex="4" id="photograph-img" src="" alt="">
         </div>
       </header>
       <!-- photograph-infos -->
-      <aside class="photograph-infos">
+      <aside tabindex="6" class="photograph-infos">
         <!-- likes -->
         <div class="photograph-infos_likes">
           <p id="photograph-infos-likes"></p>
@@ -47,8 +49,10 @@
       </aside>
       <!-- photograph-medias-filters -->
       <section class="photograph-medias-filters">
-        Trier par
-        <select onchange="filterChange(this.value)" title="Order by" name="order" id="order-filter">
+        <p tabindex="7">
+          Trier par
+        </p>
+        <select tabindex="8" onchange="filterChange(this.value)" title="Order by" name="order" id="order-filter">
           <option value="popularity">Popularité</option>
           <option value="date">Date</option>
           <option value="title">Titre</option>
@@ -58,24 +62,24 @@
       <section class="photograph-medias_section"></section>
     </main>
     <!-- media modal -->
-    <div class="modal-container" id="media_modal">
-      <div class="modal" aria-label="image closeup view">
-        <div class="modal-header">
-          <span title="Close dialog" tabindex="3" onclick="closeMediaModal()">&times;</span>
-        </div>
-        <!-- content -->
-        <div class="modal-content">
-          <div class="modal-media-img">
-            <img tabindex="-1" src="" alt="">
-            <video tabindex="-1" controls muted src=""></video>
+    <div tabindex="1" class="media-modal" aria-label="image closeup view" id="media_modal">
+      <!-- content -->
+      <div class="media-modal-content">
+        <div class="media-modal-img">
+          <div class="media-modal-img-container">
+            <img tabindex="2" src="" alt="">
+            <video tabindex="2" controls muted src=""></video>
+            <!-- close -->
+            <span class="media-modal-close" title="Close dialog" tabindex="6" onclick="closeMediaModal()">&times;</span>
+            <!-- next/prev -->
+            <a class="prev" title="Previous image" tabindex="4" onclick="mediaModalSlide(-1)">&#10094;</a>
+            <a class="next" title="Next image" tabindex="5" onclick="mediaModalSlide(1)">&#10095;</a>
+            <!-- title -->
+            <div class="media-modal-title">
+              <p tabindex="3"></p>
+            </div>
           </div>
-          <div class="modal-media-title">
-            <p></p>
-          </div>
         </div>
-        <!-- next/prev -->
-        <a class="prev" title="Previous image" tabindex="1" onclick="mediaModalSlide(-1)">&#10094;</a>
-        <a class="next" title="Next image" tabindex="2" onclick="mediaModalSlide(1)">&#10095;</a>
       </div>
     </div>
     <!-- contact modal -->
