@@ -19,7 +19,7 @@ Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javasc
 - Fonctionnalités respectées :
   - Page d'accueil: Liste de tous les photographes avec leurs informations. Au clique sur un photographe, redirection vers sa page.
   - Page photographe: Galerie des travaux du photographe (photos et vidéos). Chaque média comprend un titre et un nombre de likes. Les médias peuvent être triés par popularité ou par titre. Lorsque l'utilisateur clique sur un média, celui-ci doit s’ouvrir dans une lightbox (possibilité de naviguer entre les médias). Cette page comprend aussi un bouton pour contacter le photographe.
-- Accessibilité appliquée. 
+- Accessibilité appliquée :
   - Utilisation d'attributs HTML afin de préciser les actions et de décrire les images. 
   - Passage des tests AChecker sans erreur. 
   - La gestion des événements doit être configurée. 
