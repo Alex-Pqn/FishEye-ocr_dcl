@@ -23,7 +23,9 @@ Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javasc
   - Utilisation d'attributs HTML afin de préciser les actions et de décrire les images. 
   - Passage des tests AChecker sans erreur. 
   - La gestion des événements doit être configurée. 
-  - Test final du site avec un lecteur d'écran.
+  - Test final du site avec un lecteur d'écran
+
+### [Prévisualisation du site](https://alex-pqn.github.io/FishEye-ocr_dcl/)
 
 ---
 
