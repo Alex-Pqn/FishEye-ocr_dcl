@@ -11,7 +11,7 @@ Avec votre cheffe de projet Amanda et le Designer UI, vous venez de faire une r�
 
 Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javascript puis de le présenter à FishEye lors de notre prochain entretien avec eux.
 
-#### Nous avons rédigé une [note de réunion](./assets/Notes%20de%20reunion%20-%20FishEye.pdf) afin de résumer les fonctionnalités et les contraintes techniques additionnelles.
+#### Nous avons rédigé une [note de réunion](./assets/Notes%20de%20reunion%20-%20FishEye.pdf) afin de détailler les fonctionnalités et les contraintes techniques additionnelles.
 
 #### Objectifs
 - Site web créé en HTML5/CSS3 & Javascript ES6
