@@ -33,7 +33,7 @@ Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javasc
 
 Open the [index.html](/index.html) file in your browser or use an extension to start a local server on this file.
 
-#### You can also [preview](https://alex-pqn.github.io/FishEye-ocr_dcl/) the site directly from Github Pages
+#### [A Github Pages preview is available for this project](https://alex-pqn.github.io/FishEye-ocr_dcl/)
 
 ---
 
