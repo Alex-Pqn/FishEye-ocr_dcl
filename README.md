@@ -31,7 +31,7 @@ Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javasc
 
 ### Start App
 
-Open the [index.html](/index.html) file in your browser or use an extension to start a local server on this file.
+Clone the project then open the [index.html](/index.html) file in your browser or use an extension to start a local server on this file.
 
 > A [Github Pages preview](https://alex-pqn.github.io/FishEye-ocr_dcl/) is also available for this project
 
