@@ -27,17 +27,14 @@ Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javasc
 
 ### [Prévisualisation du site](https://alex-pqn.github.io/FishEye-ocr_dcl/)
 
----
-
-### Start App
+## Start App
 
 Clone the project then open the [index.html](/index.html) file in your browser or use an extension to start a local server on this file.
 
+> [!NOTE]  
 > A [Github Pages preview](https://alex-pqn.github.io/FishEye-ocr_dcl/) is also available for this project
 
----
-
-### Preview
+## Preview
 
 ![FishEye page d'accueil](/assets/images/FishEye%20P6%20OCR%20DCL.png)
 <br/>
