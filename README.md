@@ -13,7 +13,7 @@ Notre objectif est de construire un prototype fonctionnel en HTML, CSS et Javasc
 
 #### Nous avons rédigé une [note de réunion](./assets/Notes%20de%20reunion%20-%20FishEye.pdf) afin de détailler les fonctionnalités et les contraintes techniques additionnelles.
 
-#### Objectifs
+#### Objectifs réalisés
 - Site web créé en HTML5/CSS3 & Javascript ES6
 - Architecture des dossiers et fichiers respectée
 - Fonctionnalités respectées :
