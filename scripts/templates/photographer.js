@@ -1,19 +1,18 @@
-let tabindex = 0;
+let tabindex = 0
 
 /**
  * Photographer template
  * @param {_id: number, _name: string, _tagline: string, _price: number, location: string, pictureUrl: string} newPhotographer
  */
 // eslint-disable-next-line no-unused-vars
-function photographerTemplate (newPhotographer) {
-  const { _id, _name, _tagline, _price, location, pictureUrl } = newPhotographer;
+function photographerTemplate(newPhotographer) {
+  const { _id, _name, _tagline, _price, location, pictureUrl } = newPhotographer
 
-  tabindex += 10;
+  tabindex += 10
 
-  const cardTemplate =
-  `
+  const cardTemplate = `
   <article>
-    <a tabindex="${tabindex}" href="photographer.html?&id=${_id}">
+    <a tabindex="${tabindex}" href="photographer?&id=${_id}">
       <img src="${pictureUrl}" title="${_name}" alt="">
       <h2>
         ${_name}
@@ -31,7 +30,7 @@ function photographerTemplate (newPhotographer) {
       </p>
     </div>
   </article>
-  `;
+  `
 
-  return cardTemplate;
+  return cardTemplate
 }
