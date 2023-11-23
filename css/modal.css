@@ -1,3 +1,4 @@
+/* Media modal */
 .media-modal {
   display: none;
   flex-direction: column;
@@ -47,7 +48,7 @@
   position: absolute;
   font-size: 2.2em;
   margin: 5px;
-  top: 50%;
+  top: 40%;
 }
 
 .media-modal .prev,
@@ -64,6 +65,77 @@
   border-radius: 0.25em;
 }
 
+/* Medium & Large devices */
+@media only screen and (max-width: 768px) {
+  .media-modal-close {
+    font-size: 2.5em;
+  }
+  .media-modal .prev,
+  .media-modal .next {
+    font-size: 1.8em;
+  }
+}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .media-modal img,
+  .media-modal video {
+    max-height: 650px;
+    max-width: 650px;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+  .media-modal img,
+  .media-modal video {
+    max-height: 475px;
+    max-width: 475px;
+  }
+  .media-modal-close {
+    top: -20px;
+    font-size: 2.7em;
+  }
+  .media-modal-close,
+  .media-modal .next {
+    right: -30px;
+  }
+  .media-modal .prev {
+    left: -30px;
+  }
+  .media-modal .prev,
+  .media-modal .next {
+    font-size: 1.8em;
+    top: 35%;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 568px) {
+  .media-modal img,
+  .media-modal video {
+    max-height: 300px;
+    max-width: 260px;
+  }
+  .media-modal-close {
+    top: -18px;
+    font-size: 2.3em;
+  }
+  .media-modal-close,
+  .media-modal .next {
+    right: -23px;
+  }
+  .media-modal .prev {
+    left: -23px;
+  }
+  .media-modal .prev,
+  .media-modal .next {
+    font-size: 1.5em;
+    top: 27%;
+  }
+}
+
+/* Modal */
 #contact_modal .modal {
   background-color: #db8876;
 }
@@ -82,12 +154,12 @@
 .modal {
   position: relative;
   border-radius: 5px;
-  width: 40%;
+  width: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding: 10px 25px;
   margin: auto;
 }
 
@@ -98,11 +170,13 @@
 
 .modal header img {
   cursor: pointer;
+  width: 30px;
 }
 
 .modal header h1 {
   font-weight: normal;
   text-align: center;
+  font-size: 1.8em;
   color: black;
 }
 
@@ -131,6 +205,7 @@ form textarea {
   height: 75px;
   font-size: 1.25em;
   padding: 10px;
+  resize: none;
 }
 
 form input {
@@ -139,18 +214,78 @@ form input {
   width: 100%;
   height: 45px;
   border: none;
+}
+
+form input,
+form textarea {
+  box-sizing: border-box;
   border-radius: 5px;
 }
 
-.contact_button {
-  font-size: 17px;
-  font-weight: bold;
-  color: white;
-  padding: 9px;
-  width: 150px;
-  height: 50px;
-  border: none;
-  background-color: #901c1c;
-  border-radius: 5px;
-  cursor: pointer;
+/* Medium & Large devices */
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 80%;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+  .modal header img {
+    width: 27px;
+  }
+  .modal header h1 {
+    font-size: 1.5em;
+  }
+  form label {
+    font-size: 20px;
+  }
+  form div {
+    margin-bottom: 20px;
+  }
+  form textarea {
+    font-size: 1.15em;
+    padding: 8px;
+  }
+  form textarea,
+  form input {
+    margin-top: 5px;
+  }
+  form input {
+    padding-left: 5px;
+    font-size: 1.1em;
+    height: 35px;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 568px) {
+  .modal {
+    padding: 5px 15px;
+  }
+  .modal header {
+    height: auto;
+    padding: 15px 0;
+  }
+  .modal header img {
+    width: 15px;
+  }
+  .modal header h1 {
+    font-size: 1em;
+  }
+  form label {
+    font-size: 15px;
+  }
+  form div {
+    margin-bottom: 15px;
+  }
+  form textarea {
+    font-size: 1em;
+    padding: 6px;
+  }
+  form input {
+    padding-left: 7px;
+    font-size: 0.8em;
+    height: 35px;
+  }
 }

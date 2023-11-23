@@ -8,14 +8,18 @@ body {
 
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 90px;
 }
 
+header a {
+  display: flex;
+}
+
 h1 {
   color: #901c1c;
+  margin: 0;
   margin-right: 100px;
 }
 
@@ -28,30 +32,60 @@ a:hover {
   margin-left: 100px;
 }
 
+.contact_button {
+  margin: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 15px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Medium & Large devices */
+@media only screen and (max-width: 768px) {
+  .logo {
+    height: 20px;
+    margin-left: 20px;
+  }
+  h1 {
+    font-size: 1.1em;
+    margin-right: 20px;
+  }
+  .contact_button {
+    font-size: 0.9em;
+    padding: 12px;
+  }
+}
+
+/* Photographers section */
 .photographers_section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 100px;
   margin-bottom: 50px;
 }
 
 .photographers_section article {
-  justify-self: center;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .photographers_section article p {
   margin: 3px 0;
   text-align: center;
+  font-size: 1.2em;
 }
 
 .photographers_section article p span {
   color: #901c1c;
-  font-size: 1.2em;
 }
 
 .photographers_section article a {
@@ -72,4 +106,53 @@ a:hover {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+}
+
+/* Large devices */
+@media only screen and (max-width: 1200px) {
+  .photographers_section article {
+    width: auto !important;
+    margin: 35px !important;
+  }
+}
+
+/* Medium & Large devices */
+@media only screen and (min-width: 768px) {
+}
+
+/* Medium & Small devices */
+@media only screen and (max-width: 992px) {
+}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+/* Small devices */
+@media only screen and (max-width: 768px) {
+  .photographers_section {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  .photographers_section article p {
+    font-size: 0.9em;
+  }
+
+  .photographers_section article h2 {
+    font-size: 1.6em;
+    margin: 15px 0 5px 0;
+  }
+
+  .photographers_section article img {
+    height: 175px;
+    width: 175px;
+  }
+}
+
+/* Small devices */
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+}
+
+/* Small devices */
+@media only screen and (max-width: 568px) {
 }

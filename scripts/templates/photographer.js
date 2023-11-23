@@ -12,7 +12,7 @@ function photographerTemplate(newPhotographer) {
 
   const cardTemplate = `
   <article>
-    <a tabindex="${tabindex}" href="photographer?&id=${_id}">
+    <a tabindex="${tabindex}" href="photographer.html?id=${_id}">
       <img src="${pictureUrl}" title="${_name}" alt="">
       <h2>
         ${_name}
